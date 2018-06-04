@@ -5,3 +5,4 @@ var component = function() {
 }
 
 document.body.appendChild(component());
+
