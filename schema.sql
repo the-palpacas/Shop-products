@@ -10,8 +10,8 @@ CREATE TABLE shops (
   city varchar(20),
   state varchar(20),
   shop_image_url varchar(100),
-  PRIMARY KEY (id)
-)
+  PRIMARY KEY (ID)
+);
 
 insert into shops (id, name, city, state, shop_image_url) values (1, 'Pet Arts Inc', 'Bronx', 'New York', 'https://s3-us-west-1.amazonaws.com/shopsproductsphotos/shoplogo1.jpg');
 insert into shops (id, name, city, state, shop_image_url) values (2, 'Russel, Doyle and Hammes', 'Hagerstown', 'Maryland', 'https://s3-us-west-1.amazonaws.com/shopsproductsphotos/shoplogo2.jpg');
@@ -31,12 +31,12 @@ insert into shops (id, name, city, state, shop_image_url) values (15, 'Littl Cat
 
 CREATE TABLE products (
   id int NOT NULL,
-  name varchar(30),
+  name varchar(80),
   price DECIMAL(5,2),
   liked varchar(5),
   id_shops int,
-  PRIMARY KEY (id)
-)
+  PRIMARY KEY (ID)
+);
 
 insert into products (id, name, price, liked, id_shops) values (1, 'Kittens playing painting', 134.55, 'false', 12);
 insert into products (id, name, price, liked, id_shops) values (2, 'Eagle, pallas''s fish painting', 36.39, 'false', 11);
@@ -194,8 +194,8 @@ CREATE TABLE images (
   id int NOT NULL,
   id_product int,
   image_url varchar(100),
-  PRIMARY KEY (id)
-)
+  PRIMARY KEY (ID)
+);
 
 insert into images (id, id_product, image_url) values (1, 1, 'https://s3-us-west-1.amazonaws.com/shopsproductsphotos/img1.jpg');
 insert into images (id, id_product, image_url) values (2, 2, 'https://s3-us-west-1.amazonaws.com/shopsproductsphotos/img2.jpg');
