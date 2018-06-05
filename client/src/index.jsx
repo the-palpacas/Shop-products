@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 var axios = require('axios');
 
-class App extends React.Component {
+class ShopProducts extends React.Component {
   constructor(props) {
     super(props);
     
@@ -17,4 +18,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<ShopProducts />, document.getElementById('shopProducts'));
