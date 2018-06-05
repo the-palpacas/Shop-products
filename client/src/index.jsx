@@ -1,8 +1,20 @@
-var component = function() {
-  var element = document.createElement('div');
-  element.innerHTML = _.join(['Shop', 'Prodcuts'], ' ');
-  return element;
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+var axios = require('axios');
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    
+  }
+  render() {
+    return (
+      <div>
+        Shop modules
+      </div>
+    )
+  }
 }
 
-document.body.appendChild(component());
-
+ReactDOM.render(<App />, document.getElementById('app'));
