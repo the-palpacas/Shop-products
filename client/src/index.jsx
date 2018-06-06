@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ShopInfo from './components/shopInfo.jsx'
+import axios from 'axios';
 
-var axios = require('axios');
-
-class shopProducts extends React.Component {
+class ShopProducts extends React.Component {
   constructor(props) {
     super(props);
     
@@ -12,12 +12,10 @@ class shopProducts extends React.Component {
   render() {
     return (
       <div>
-        Shop modules
+        <ShopInfo />
       </div>
     )
   }
 }
 
 ReactDOM.render(<ShopProducts />, document.getElementById('shopProducts'));
-
-
