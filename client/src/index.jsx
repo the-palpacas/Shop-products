@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import 'bootstrap';
-import ShopInfo from './components/shopInfo.jsx'
 import axios from 'axios';
 import ShopInfo from './components/shopInfo.jsx';
 import SearchBar from './components/searchBar.jsx';
