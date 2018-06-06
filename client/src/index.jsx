@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ShopInfo from './components/shopInfo.jsx'
 
 var axios = require('axios');
 
@@ -12,7 +13,7 @@ class ShopProducts extends React.Component {
   render() {
     return (
       <div>
-        Shop modules
+        <ShopInfo />
       </div>
     )
   }
