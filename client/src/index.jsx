@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import ShopInfo from './components/shopInfo.jsx'
+import 'bootstrap';
 import axios from 'axios';
+import ShopInfo from './components/shopInfo.jsx';
+import SearchBar from './components/searchBar.jsx';
+import ProductGrid from './components/productGrid.jsx'
+
 
 class ShopProducts extends React.Component {
   constructor(props) {
@@ -11,8 +15,10 @@ class ShopProducts extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="shopProductsContainer">
         <ShopInfo />
+        <SearchBar />
+        <ProductGrid />
       </div>
     )
   }
