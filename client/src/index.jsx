@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import 'bootstrap';
 import ShopInfo from './components/shopInfo.jsx'
 import axios from 'axios';
 
@@ -12,7 +13,7 @@ class ShopProducts extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="shopProductsContainer">
         <ShopInfo />
       </div>
     )
