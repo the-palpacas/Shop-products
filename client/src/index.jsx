@@ -5,8 +5,8 @@ import 'bootstrap';
 import ShopInfo from './components/shopInfo.jsx';
 import SearchBar from './components/searchBar.jsx';
 import ProductGrid from './components/productGrid.jsx'
-
-var axios = require('axios');
+import ShopInfo from './components/shopInfo.jsx'
+import axios from 'axios';
 
 class ShopProducts extends React.Component {
   constructor(props) {
