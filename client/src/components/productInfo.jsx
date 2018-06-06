@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductInfo = function(props) {
+const ProductInfo = (props) => {
   return(
     <div className="productInfo">
       <img className="img-thumbnail" src="https://s3-us-west-1.amazonaws.com/shopsproductsphotos/img104.jpg" />

@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductInfo from './productInfo.jsx'
 
-const ProductGrid = function(props) {
+const ProductGrid = (props) => {
   return (
     <div>
       <div className="productGrid">

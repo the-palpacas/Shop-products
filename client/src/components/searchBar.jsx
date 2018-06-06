@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = function(props) {
+const SearchBar = (props) => {
   return (
     <div className="form-group">
       <form className="col-xs-3">
