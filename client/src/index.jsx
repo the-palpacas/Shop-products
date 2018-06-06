@@ -15,6 +15,7 @@ class ShopProducts extends React.Component {
     return (
       <div className="shopProductsContainer">
         <ShopInfo />
+        <SearchBar />
       </div>
     )
   }

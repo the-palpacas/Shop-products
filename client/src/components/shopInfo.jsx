@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ShopInfo(props) {
+const ShopInfo = function(props) {
   return (
     <div className="shopInfo">
       <img className="img-rounded" src="https://s3-us-west-1.amazonaws.com/shopsproductsphotos/shoplogo9.jpg"/> 
