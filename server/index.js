@@ -19,7 +19,7 @@ app.get('/:id/shopproducts', (req, res) => {
     FROM products 
     INNER JOIN images  
     WHERE products.id = images.id_product 
-      AND products.id_shops = (SELECT id_shops from products where id = 100) 
+      AND products.id_shops = (SELECT id_shops from products where id = ${req.params.id}) 
     ORDER BY products.id;`,
 
      (error, results) => {

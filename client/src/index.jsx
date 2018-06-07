@@ -12,13 +12,16 @@ class ShopProducts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      shopInfo: null,
-      shopProducts: {}
+      shopInfo: {
+        city: null,
+        name: null,
+        shop_image_url: null
+      }
     }
+    this.getShopProductInfo();
   }
 
-  componentDidMount() {
-    console.log(`${window.location.href}shopproducts`)
+  getShopProductInfo() {
     axios.get(`${window.location.href}shopproducts`)
     .then(response => {
     let products = response.data[1];
@@ -34,26 +37,25 @@ class ShopProducts extends React.Component {
         liked: item.liked,
         imgs_url: [item.image_url]
       }
-       
-      
     })
-
-     this.setState({
+    this.setState({
       shopInfo: response.data[0][0],
       shopProducts: sortByProductsId 
-     })
-      console.log('axio request successful!', response.data[0], response.data[1])
-    }) 
-    .catch(error => {
-      console.log('axio request fail', error)
-
     })
- }
+    })
+    .catch(error => {
+      console.log('Error: ', error)
+    })
+  }
+
+  componentDidMount() {
+    
+  }
 
   render() {
     return (
       <div className="shopProductsContainer">
-        <ShopInfo />
+        <ShopInfo info={this.state.shopInfo}/>
         <SearchBar />
         <ProductGrid />
       </div>
