@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ShopInfo = (props) => {
-  console.log("======>",props.info)
   return (
     <div className="shopInfo">
       <img className="img-rounded" src={props.info.shop_image_url}/> 

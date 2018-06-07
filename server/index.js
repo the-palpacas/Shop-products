@@ -23,7 +23,6 @@ app.get('/:id/shopproducts', (req, res) => {
     ORDER BY products.id;`,
 
      (error, results) => {
-       console.log(results);
        error 
        ? res.status(500).end()
        : res.status(200).json(results)
