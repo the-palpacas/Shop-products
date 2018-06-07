@@ -1,8 +1,12 @@
-var mysql = require('mysql');
-var dbConnection = mysql.createConnection({
+const mysql = require('mysql');
+const connection = mysql.createConnection({
   user: 'root',
-  database: 'shopProducts'
+  database: 'shopProducts',
+  multipleStatements: true
 })
 
-module.exports = dbConnection;
+connection.connect();
+
+
+module.exports = connection;
 
