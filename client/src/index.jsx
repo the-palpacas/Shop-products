@@ -11,8 +11,45 @@ import ProductGrid from './components/productGrid.jsx';
 class ShopProducts extends React.Component {
   constructor(props) {
     super(props);
-    
+    this.state = {
+      shopInfo: null,
+      shopProducts: {}
+    }
   }
+
+  componentDidMount() {
+    console.log(`${window.location.href}shopproducts`)
+    axios.get(`${window.location.href}shopproducts`)
+    .then(response => {
+    let products = response.data[1];
+    let sortByProductsId = {};
+    products.forEach((item)=>{
+      let prodName = item.name;
+    
+      sortByProductsId[prodName]
+      ? sortByProductsId[prodName].imgs_url.push(item.image_url)
+      : sortByProductsId[prodName] = {
+        id: item.id,
+        price: item.price,
+        liked: item.liked,
+        imgs_url: [item.image_url]
+      }
+       
+      
+    })
+
+     this.setState({
+      shopInfo: response.data[0][0],
+      shopProducts: sortByProductsId 
+     })
+      console.log('axio request successful!', response.data[0], response.data[1])
+    }) 
+    .catch(error => {
+      console.log('axio request fail', error)
+
+    })
+ }
+
   render() {
     return (
       <div className="shopProductsContainer">
