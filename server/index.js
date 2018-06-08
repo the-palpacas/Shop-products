@@ -4,7 +4,7 @@ const db = require('../database/index.js');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/:id', express.static(__dirname + '/../public/dist'));
 
@@ -22,14 +22,9 @@ app.get('/:id/shopproducts', (req, res) => {
       AND products.id_shops = (SELECT id_shops from products where id = ${req.params.id}) 
     ORDER BY products.id;`,
 
-     (error, results) => {
-       error 
-       ? res.status(500).end()
-       : res.status(200).json(results)
-     })
+    (error, results) => (error ? res.status(500).end() : res.status(200).json(results)),
+  );
 });
 
-
-
-app.listen(5000, ()=>console.log('App listening to port 5000'));
+app.listen(5000, () => console.log('App listening to port 5000'));
 

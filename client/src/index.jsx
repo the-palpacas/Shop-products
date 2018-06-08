@@ -15,53 +15,48 @@ class ShopProducts extends React.Component {
       shopInfo: {
         city: null,
         name: null,
-        shop_image_url: null
+        shop_image_url: null,
       },
-      shopProducts : {}
-    }
+      shopProducts: {},
+    };
+  }
+  
+  componentDidMount() {
     this.getShopProductInfo();
   }
 
   getShopProductInfo() {
     axios.get(`${window.location.href}shopproducts`)
-    .then(response => {
-    let products = response.data[1];
-    let sortByProductsId = {};
-    products.forEach((item)=>{
-      let prodName = item.name;
-    
-      sortByProductsId[prodName]
-      ? sortByProductsId[prodName].imgs_url.push(item.image_url)
-      : sortByProductsId[prodName] = {
-        id: item.id,
-        price: item.price,
-        liked: item.liked,
-        imgs_url: [item.image_url]
-      }
-    })
-    this.setState({
-      shopInfo: response.data[0][0],
-      shopProducts: sortByProductsId 
-    })
-    })
-    .catch(error => {
-      console.log('Error: ', error)
-    })
-  }
-
-  componentDidMount() {
-    
+      .then((response) => {
+        let products = response.data[1];
+        let sortByProductsId = {};
+        products.forEach((item) => {
+          let prodName = item.name;
+          sortByProductsId[prodName]
+            ? (sortByProductsId[prodName].imgs_url.push(item.image_url))
+            : sortByProductsId[prodName] = {
+              id: item.id,
+              price: item.price,
+              liked: item.liked,
+              imgs_url: [item.image_url],
+            };
+        });
+        this.setState({
+          shopInfo: response.data[0][0],
+          shopProducts: sortByProductsId,
+        });
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   render() {
     return (
       <div className="shopProductsContainer">
-        <ShopInfo info={this.state.shopInfo}/>
+        <ShopInfo info={this.state.shopInfo} />
         <SearchBar />
-        <ProductGrid  shopProducts={this.state.shopProducts}/>
-        
+        <ProductGrid shopProducts={this.state.shopProducts} />
       </div>
-    )
+    );
   }
 }
 

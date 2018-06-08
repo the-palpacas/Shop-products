@@ -1,9 +1,10 @@
 const mysql = require('mysql');
+
 const connection = mysql.createConnection({
   user: 'root',
   database: 'shopProducts',
-  multipleStatements: true
-})
+  multipleStatements: true,
+});
 
 connection.connect();
 
