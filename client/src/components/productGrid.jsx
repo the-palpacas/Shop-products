@@ -4,7 +4,7 @@ import ProductInfo from './productInfo.jsx'
 const ProductGrid = (props) => {
   return (
     <div>
-      {Object.entries(props.shopProducts).map((item, key) => {
+      {Object.entries(props.shopProducts).map((item) => {
         return (
           <div className="productGrid">
             <ProductInfo prodInfo={item} />
