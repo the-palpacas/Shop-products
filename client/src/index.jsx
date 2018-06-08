@@ -16,7 +16,8 @@ class ShopProducts extends React.Component {
         city: null,
         name: null,
         shop_image_url: null
-      }
+      },
+      shopProducts : {}
     }
     this.getShopProductInfo();
   }
@@ -57,10 +58,12 @@ class ShopProducts extends React.Component {
       <div className="shopProductsContainer">
         <ShopInfo info={this.state.shopInfo}/>
         <SearchBar />
-        <ProductGrid />
+        <ProductGrid  shopProducts={this.state.shopProducts}/>
+        
       </div>
     )
   }
 }
 
 ReactDOM.render(<ShopProducts />, document.getElementById('shopProducts'));
+
