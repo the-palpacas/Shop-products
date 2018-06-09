@@ -6,7 +6,6 @@ import axios from 'axios';
 import ShopInfo from './components/shopInfo.jsx';
 import SearchBar from './components/searchBar.jsx';
 import ProductGrid from './components/productGrid.jsx';
-import PhotoCarousel from './components/photoCarousel.jsx';
 
 
 class ShopProducts extends React.Component {
@@ -37,7 +36,7 @@ class ShopProducts extends React.Component {
             ? (sortByProductsId[prodName].imgs_url.push(item.image_url))
             : sortByProductsId[prodName] = {
               id: item.id,
-              price: item.price,
+              price: Number(item.price).toFixed(2),
               liked: item.liked,
               imgs_url: [item.image_url],
             };

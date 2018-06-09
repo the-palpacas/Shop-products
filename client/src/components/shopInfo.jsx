@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShopInfo = (props) => { 
+function ShopInfo(props) { 
   return (
     <div className="shopInfo">
       <img className="img-rounded" src={props.info.shop_image_url} alt="" />
@@ -8,7 +8,7 @@ const ShopInfo = (props) => {
       <div className="shopLocation">{props.info.city}, {props.info.state}</div>
     </div>
   );
-};
+}
 
 export default ShopInfo;
 
