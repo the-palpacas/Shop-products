@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PhotoCarousel(props) {
+const PhotoCarousel = (props) => {
   const carouselId = `carousel${props.prodId}`;
   const hashCarouselId = `#${carouselId}`;
   const slides = props.imgs_url.map((url, index) => {
@@ -45,6 +45,6 @@ function PhotoCarousel(props) {
     </div>
 
   );
-}
+};
 
 export default PhotoCarousel;

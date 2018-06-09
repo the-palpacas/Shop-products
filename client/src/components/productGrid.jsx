@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductInfo from './productInfo.jsx';
 
-function ProductGrid(props) {
+const ProductGrid = (props) => {
   return (
     <div>
       {Object.entries(props.shopProducts).map((item, index) => {

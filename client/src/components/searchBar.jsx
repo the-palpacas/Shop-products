@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchBar(props) {
+const SearchBar = (props) => {
   return (
     <div className="form-group">
       <form className="col-xs-3">
@@ -9,6 +9,6 @@ function SearchBar(props) {
       </form>
     </div>
   );
-}
+};
 
 export default SearchBar;

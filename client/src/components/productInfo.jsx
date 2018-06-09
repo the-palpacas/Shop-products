@@ -1,7 +1,7 @@
 import React from 'react';
 import PhotoCarousel from './photoCarousel.jsx';
 
-function ProductInfo(props) {
+const ProductInfo = (props) => {
   return (
     <div className="productInfo">
       <PhotoCarousel imgs_url={props.prodInfo[1].imgs_url} prodId={props.prodInfo[1].id} />
@@ -11,7 +11,7 @@ function ProductInfo(props) {
       </div>
     </div>
   );
-}
+};
 
 export default ProductInfo;
 
