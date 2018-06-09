@@ -4,20 +4,15 @@ import ProductInfo from './productInfo.jsx'
 const ProductGrid = (props) => {
   return (
     <div>
-      <div className="productGrid">
-        <ProductInfo />
-        <ProductInfo />
-      </div>
-      <div className="productGrid">
-      <ProductInfo />
-      <ProductInfo />
+      {Object.entries(props.shopProducts).map((item) => {
+        return (
+          <div className="productGrid">
+            <ProductInfo prodInfo={item} />
+          </div>
+        );
+      })}
     </div>
-    <div className="productGrid">
-      <ProductInfo />
-      <ProductInfo />
-    </div>
-  </div>
-  )
-}
+  );
+};
 
 export default ProductGrid;
