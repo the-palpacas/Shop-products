@@ -6,7 +6,7 @@ module.exports = {
       "import"
     ],
     "rules": {
-      "no-unused-expressions": ["error", {"allowTernary": true}]
+      "no-unused-expressions": ["error", {"allowTernary": true}],
     },
     "settings": {
       "import/resolver": {
@@ -14,5 +14,9 @@ module.exports = {
           "extensions": [".js",".jsx"]
         }
       }
-    }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+    },
 };
