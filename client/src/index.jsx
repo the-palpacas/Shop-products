@@ -6,6 +6,7 @@ import axios from 'axios';
 import ShopInfo from './components/shopInfo.jsx';
 import SearchBar from './components/searchBar.jsx';
 import ProductGrid from './components/productGrid.jsx';
+import PhotoCarousel from './components/photoCarousel.jsx';
 
 
 class ShopProducts extends React.Component {
@@ -19,10 +20,10 @@ class ShopProducts extends React.Component {
       },
       shopProducts: {},
     };
-  }
-  
-  componentDidMount() {
     this.getShopProductInfo();
+  }
+
+  componentDidMount() {
   }
 
   getShopProductInfo() {
