@@ -19,24 +19,24 @@ class ShopProducts extends React.Component {
       },
       shopProducts: {},
     };
-  }
-  
-  componentDidMount() {
     this.getShopProductInfo();
+  }
+
+  componentDidMount() {
   }
 
   getShopProductInfo() {
     axios.get(`${window.location.href}shopproducts`)
       .then((response) => {
-        let products = response.data[1];
-        let sortByProductsId = {};
+        const products = response.data[1];
+        const sortByProductsId = {};
         products.forEach((item) => {
           let prodName = item.name;
           sortByProductsId[prodName]
             ? (sortByProductsId[prodName].imgs_url.push(item.image_url))
             : sortByProductsId[prodName] = {
               id: item.id,
-              price: item.price,
+              price: Number(item.price).toFixed(2),
               liked: item.liked,
               imgs_url: [item.image_url],
             };

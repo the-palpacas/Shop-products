@@ -1,12 +1,12 @@
 module.exports = {
-    "extends": "airbnb",
+    "extends": ["airbnb", "./node_modules/eslint-config-hackreactor/index.js"],
     "plugins": [
       "react",
       "jsx-a11y",
       "import"
     ],
     "rules": {
-      "no-unused-expressions": ["error", {"allowTernary": true}]
+      "no-unused-expressions": ["error", {"allowTernary": true}],
     },
     "settings": {
       "import/resolver": {
@@ -14,5 +14,9 @@ module.exports = {
           "extensions": [".js",".jsx"]
         }
       }
-    }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+    },
 };
