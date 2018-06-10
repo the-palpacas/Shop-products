@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import 'bootstrap';
 import axios from 'axios';
+import Promise from 'bluebird';
 import ShopInfo from './components/shopInfo.jsx';
 import SearchBar from './components/searchBar.jsx';
 import ProductGrid from './components/productGrid.jsx';
@@ -18,11 +19,44 @@ class ShopProducts extends React.Component {
         shop_image_url: null,
       },
       shopProducts: {},
+      displayProducts: {},
+      search: null,
+      currentProdId: Number(window.location.pathname.slice(1,2)),
     };
+    this.handleSearch = this.handleSearch.bind(this);
+    this.updateSearchState = this.updateSearchState.bind(this);
+  }
+  componentDidMount() {
     this.getShopProductInfo();
   }
 
-  componentDidMount() {
+  handleSearch(e) {
+    e.preventDefault();
+    this.updateDisplayProducts();
+  }
+
+  updateSearchState(e){
+    e.preventDefault();
+    this.setState({search: e.target.value.toLowerCase()})
+  }
+
+  updateDisplayProducts() {
+    let searchResult = {};
+    if (this.state.search) {
+      Object.entries(this.state.shopProducts).forEach((prod) => {
+        const prodName = prod[0].toLowerCase();
+        console.log(prodName)
+        if (prodName.includes(this.state.search)) {
+        
+          searchResult[prodName] = prod[1];
+        }
+      })
+    }
+    this.setState({
+      displayProducts: searchResult,
+      // search: null
+    })
+    
   }
 
   getShopProductInfo() {
@@ -44,6 +78,7 @@ class ShopProducts extends React.Component {
         this.setState({
           shopInfo: response.data[0][0],
           shopProducts: sortByProductsId,
+          displayProducts: sortByProductsId,
         });
       })
       .catch(error => console.log('Error: ', error));
@@ -53,8 +88,8 @@ class ShopProducts extends React.Component {
     return (
       <div className="shopProductsContainer">
         <ShopInfo info={this.state.shopInfo} />
-        <SearchBar />
-        <ProductGrid shopProducts={this.state.shopProducts} />
+        <SearchBar handleSearch={this.handleSearch} updateSearchState={this.updateSearchState}/>
+        <ProductGrid displayProducts={this.state.displayProducts} search={this.state.search}/>
       </div>
     );
   }
