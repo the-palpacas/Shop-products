@@ -42,21 +42,23 @@ class ShopProducts extends React.Component {
 
   updateDisplayProducts() {
     let searchResult = {};
-    if (this.state.search) {
+    if (this.state.search !== null) {
       Object.entries(this.state.shopProducts).forEach((prod) => {
         const prodName = prod[0].toLowerCase();
-        console.log(prodName)
         if (prodName.includes(this.state.search)) {
-        
-          searchResult[prodName] = prod[1];
+          searchResult[prod[0]] = prod[1];
         }
       })
-    }
-    this.setState({
-      displayProducts: searchResult,
-      // search: null
-    })
     
+      this.setState({
+        displayProducts: searchResult,
+        search: null
+      })
+   } else {
+     this.setState({
+       displayProducts: this.state.shopProducts
+     })
+   }
   }
 
   getShopProductInfo() {
