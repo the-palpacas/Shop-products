@@ -13,7 +13,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'bundleShopProducts.js',
     path: __dirname + '/public/dist'
   },
 };
