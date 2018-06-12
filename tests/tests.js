@@ -1,8 +1,8 @@
 const puppeteer = require('puppeteer');
-import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+const React =require('react');
+const enzyme = require('enzyme');
 
-import ShopInfo from './shopInfo.jsx';
+const ShopInfo = require('./shopInfo.jsx');
 
 const pageUrl = 'http://127.0.0.1:5000/47/';
 
