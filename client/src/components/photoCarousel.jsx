@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const PhotoCarousel = (props) => {
   const carouselId = `carousel${props.prodId}`;
   const slides = props.imgs_url.map((url, index) => {
