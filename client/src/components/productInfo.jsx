@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import $ from 'jquery';
+// import $ from 'jquery';
 import PhotoCarousel from './photoCarousel.jsx';
 
 const ProductInfoWrapper = styled.div`
@@ -26,17 +26,10 @@ const Price = styled.div`
 `
 
 const ProductInfo = (props) => {
-  $(() => {
-    $('[data-toggle="tooltip"]').tooltip({
-      trigger: 'hover',
-      delay: { "show": 500, "hide": 100 }
-    });
-  });
-
 
   return (
     <ProductInfoWrapper>
-      <PhotoCarousel imgs_url={props.prodInfo[1].imgs_url} prodId={props.prodInfo[1].id} />
+      <img className="img-thumbnail" src={props.prodInfo[1].imgs_url[0]} alt="" />
       <div>
         <ProductName title={props.prodInfo[0]}>{props.prodInfo[0]}</ProductName>
         <Price name="price">${props.prodInfo[1].price}</Price>

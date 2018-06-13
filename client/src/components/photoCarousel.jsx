@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 
 const PhotoCarousel = (props) => {
   const carouselId = `carousel${props.prodId}`;
+
   const slides = props.imgs_url.map((url, index) => {
     let altText = `Slide ${index + 1}`;
     if (index === 0) {
@@ -27,6 +29,7 @@ const PhotoCarousel = (props) => {
   });
 
   return (
+    
     <div id={carouselId} className="carousel slide" data-ride="carousel" data-interval="false">
       <ol className="carousel-indicators">
         {indicators}
@@ -42,9 +45,11 @@ const PhotoCarousel = (props) => {
         <span className="carousel-control-next-icon" aria-hidden="true" />
         <span className="sr-only">Next</span>
       </a>
-    </div>
+    </div> 
+
 
   );
 };
 
 export default PhotoCarousel;
+
