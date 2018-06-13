@@ -1,27 +1,27 @@
-
+/* 
 .shopProductsContainer {
   width: 400px;
   height: 1400px;
   margin: 12px;
   text-align: center;
   font-family: helvetica, arial, sans-serif;
-}
+} */
 
-.img-rounded {
+/* .img-rounded {
   width: 50px;
   height: 50px;
   
-}
+} */
 
-.shopInfo {
+/* .shopInfo {
   left: 50%;
   font-size: 18px;
-}
+} */
 
-.shopLocation {
+/* .shopLocation {
   font-size: 14px;
   color: gray;
-}
+} */
 
 .productInfo {
   top: 20px;
@@ -39,9 +39,9 @@
   filter: alpha(opacity=60);
 }
 
-.bold {
+/* .bold {
   font-weight: bold; 
-}
+} */
 
 .shippingInfo {
   color: gray;
@@ -75,7 +75,7 @@ img {
 }
 
 /* searchBar */
-.btn-outline-secondary{
+/* .btn-outline-secondary{
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-repeat: no-repeat;
   background-position: 5px 5px;
@@ -83,19 +83,19 @@ img {
   border: 1px solid #ced4da;
   width: 30px;
   border-right-color: white;
-}
+} */
 
-.form-control {
+/* .form-control {
   font-weight: 100;
-}
+} */
 
-.searchBar {
+/* .searchBar {
   margin-top: 5px;
   height: 30px;
-}
+} */
 
-.searchInput {
+/* .searchInput {
   font-size: 14px;
   color: gray;
   padding-bottom: 4px;
-}
+} */
