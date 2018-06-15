@@ -1,22 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
 import axios from 'axios';
-import Promise from 'bluebird';
-// import styled from 'styled-components';
 import ShopInfo from './components/shopInfo.jsx';
 import SearchBar from './components/searchBar.jsx';
 import ProductGrid from './components/productGrid.jsx';
-
-
-// const ShopProductsContainer = styled.div`
-//   width: 400px;
-//   height: 1400px;
-//   margin: 12px;
-//   text-align: center;
-//   font-family: helvetica, arial, sans-serif;
-//   font-size: 14px;
-// `;
 
 class ShopProducts extends React.Component {
   constructor(props) {
@@ -94,8 +81,6 @@ class ShopProducts extends React.Component {
       })
       .catch(error => console.log('Error: ', error));
   }
-
-
 
   render() {
     return (

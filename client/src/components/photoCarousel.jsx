@@ -29,9 +29,8 @@ const PhotoCarousel = (props) => {
   });
 
   return (
-    
     <div id={carouselId} className="carousel slide" data-ride="carousel" data-interval="false">
-      <ol className="carousel-indicators">
+      <ol className="carousel-indicators indicator">
         {indicators}
       </ol>
       <div className="carousel-inner">
@@ -46,8 +45,6 @@ const PhotoCarousel = (props) => {
         <span className="sr-only">Next</span>
       </a>
     </div> 
-
-
   );
 };
 

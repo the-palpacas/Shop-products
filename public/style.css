@@ -30,15 +30,22 @@
   width: 45%;
   margin: 2.5%;
   font-size: 14px;
+  text-align: left;
 }
 
-.tooltip-arrow,
-.tooltip > .tooltip-inner {
-  background-color: silver;
-  font-size: 12px;
-  color: black;
-  filter: alpha(opacity=60);
+.productName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 8px;
 }
+
+.price {
+  font-weight: bold; 
+  float: left;
+  padding-left: 3px;
+}
+
 
 .bold {
   font-weight: bold; 
@@ -66,7 +73,7 @@
   height: 6px;
 }
 
-ol {
+.indicator {
   margin-bottom: 0rem;
 }
 
@@ -99,28 +106,7 @@ ol {
   box-sizing: border-box;
 }
 
-/* searchBar */
-/* .btn-outline-secondary{
-  background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-repeat: no-repeat;
-  background-position: 5px 5px;
-  background-size: 18px 18px;
-  border: 1px solid #ced4da;
-  width: 30px;
-  border-right-color: white;
-} */
-
-/* .form-control {
-  font-weight: 100;
-} */
-
-/* .searchBar {
-  margin-top: 5px;
-  height: 30px;
-} */
-
 .searchInput {
-
   width: 100%;
   padding: .375rem .75rem;
   font-size: 14px;
