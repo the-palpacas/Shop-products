@@ -1,5 +1,5 @@
 
-.shopProductsContainer {
+#shopProducts .shopProductsContainer {
   width: 400px;
   height: 1400px;
   margin: 12px;
@@ -8,23 +8,23 @@
   font-size: 14px;
 }
 
-.shopInfoWrapper { 
+#shopProducts .shopInfoWrapper { 
   left: 50%;
   font-size: 18px;
 }
 
-.shopLogo {
+#shopProducts .shopLogo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.shopLocation {
+#shopProducts .shopLocation {
   font-size: 14px;
   color: gray;
 }
 
-.productInfoWrapper {
+#shopProducts .productInfoWrapper {
   top: 20px;
   float: left;
   width: 45%;
@@ -33,56 +33,56 @@
   text-align: left;
 }
 
-.productName {
+#shopProducts .productName {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding-top: 8px;
 }
 
-.price {
+#shopProducts .price {
   font-weight: bold; 
   float: left;
   padding-left: 3px;
 }
 
 
-.bold {
+#shopProducts .bold {
   font-weight: bold; 
 }
 
-.shippingInfo {
+#shopProducts .shippingInfo {
   color: gray;
   font-weight: normal;
   font-size: 80%;
 }
 
-.img-thumbnail {
+#shopProducts .img-thumbnail {
   width: 185px;
   height: 150px;
 }
 
-.carousel-item {
+#shopProducts .carousel-item {
   width: 185px;
   height: 150px;
 }
 
-.carousel-indicators li{
+#shopProducts .carousel-indicators li{
   border-radius: 12px;
   width: 6px;
   height: 6px;
 }
 
-.indicator {
+#shopProducts .indicator {
   margin-bottom: 0rem;
 }
 
-.prodImg {
+#shopProducts .prodImg {
   width: 185px;
   height: 150px;
 }
 
-.searchBarWrapper {
+#shopProducts .searchBarWrapper {
   margin-bottom: 1rem!important;
   display: flex;
   align-items: stretch;
@@ -93,7 +93,7 @@
   border: 1px solid #ced4da;
 }
 
-.searchButton {
+#shopProducts .searchButton {
   margin-right: -1px;
   display: flex;
   background-image: url('https://www.w3schools.com/css/searchicon.png');
@@ -106,7 +106,7 @@
   box-sizing: border-box;
 }
 
-.searchInput {
+#shopProducts .searchInput {
   width: 100%;
   padding: .375rem .75rem;
   font-size: 14px;
