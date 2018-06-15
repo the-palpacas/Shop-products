@@ -3,20 +3,20 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import axios from 'axios';
 import Promise from 'bluebird';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import ShopInfo from './components/shopInfo.jsx';
 import SearchBar from './components/searchBar.jsx';
 import ProductGrid from './components/productGrid.jsx';
 
 
-const ShopProductsContainer = styled.div`
-  width: 400px;
-  height: 1400px;
-  margin: 12px;
-  text-align: center;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 14px;
-`;
+// const ShopProductsContainer = styled.div`
+//   width: 400px;
+//   height: 1400px;
+//   margin: 12px;
+//   text-align: center;
+//   font-family: helvetica, arial, sans-serif;
+//   font-size: 14px;
+// `;
 
 class ShopProducts extends React.Component {
   constructor(props) {
@@ -71,7 +71,7 @@ class ShopProducts extends React.Component {
   }
 
   getShopProductInfo() {
-    axios.get(`${window.location.href}shopproducts`)
+    axios.get(`${window.location.href}shopproducts/`)
       .then((response) => {
         const products = response.data[1];
         const sortByProductsId = {};
@@ -99,11 +99,11 @@ class ShopProducts extends React.Component {
 
   render() {
     return (
-      <ShopProductsContainer>
+      <div className="shopProductsContainer">
         <ShopInfo info={this.state.shopInfo} />
         <SearchBar handleSearch={this.handleSearch} updateSearchState={this.updateSearchState}/>
         <ProductGrid displayProducts={this.state.displayProducts} search={this.state.search}/>
-      </ShopProductsContainer>
+      </div>
     );
   }
 }

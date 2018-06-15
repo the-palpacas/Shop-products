@@ -2,13 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('../database/index.js');
 
+const port = process.env.PORT || 5000;
+
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/:id', express.static(__dirname + '/../public/'));
+app.use('/:id/', express.static(__dirname + '/../public/'));
 
-app.get('/:id/shopproducts', (req, res) => {
+app.get('/:id/shopproducts/', (req, res) => {
   db.query(
     `SELECT name, city, state, shop_image_url
      FROM shops 
@@ -26,5 +28,5 @@ app.get('/:id/shopproducts', (req, res) => {
   );
 });
 
-app.listen(5000, () => console.log('App listening to port 5000'));
+app.listen(port, () => console.log('App listening to port 5000'));
 

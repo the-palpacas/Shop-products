@@ -16,7 +16,7 @@ const PhotoCarousel = (props) => {
     }
     return (
       <div className="carousel-item" key={index.toString()} >
-        <img className="d-block w-100" src={url} alt={altText} />
+        <img className="d-block w-100 prodImg" src={url} alt={altText} />
       </div>
     );
   });

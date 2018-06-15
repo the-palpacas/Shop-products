@@ -17,4 +17,3 @@ const ProductGrid = (props) => {
 
 export default ProductGrid;
 
-// && item[0].includes(props.search)

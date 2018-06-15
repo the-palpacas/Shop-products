@@ -1,35 +1,36 @@
-/* 
+
 .shopProductsContainer {
   width: 400px;
   height: 1400px;
   margin: 12px;
   text-align: center;
   font-family: helvetica, arial, sans-serif;
-} */
+  font-size: 14px;
+}
 
-/* .img-rounded {
-  width: 50px;
-  height: 50px;
-  
-} */
-
-/* .shopInfo {
+.shopInfoWrapper { 
   left: 50%;
   font-size: 18px;
-} */
+}
 
-/* .shopLocation {
+.shopLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.shopLocation {
   font-size: 14px;
   color: gray;
-} */
+}
 
-/* .productInfo {
+.productInfoWrapper {
   top: 20px;
   float: left;
   width: 45%;
   margin: 2.5%;
   font-size: 14px;
-} */
+}
 
 .tooltip-arrow,
 .tooltip > .tooltip-inner {
@@ -39,9 +40,9 @@
   filter: alpha(opacity=60);
 }
 
-/* .bold {
+.bold {
   font-weight: bold; 
-} */
+}
 
 .shippingInfo {
   color: gray;
@@ -69,9 +70,33 @@ ol {
   margin-bottom: 0rem;
 }
 
-img {
+.prodImg {
   width: 185px;
   height: 150px;
+}
+
+.searchBarWrapper {
+  margin-bottom: 1rem!important;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #ced4da;
+}
+
+.searchButton {
+  margin-right: -1px;
+  display: flex;
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  background-size: 18px 18px;
+  border: none;
+  width: 30px;
+  border-right-color: white;
+  box-sizing: border-box;
 }
 
 /* searchBar */
@@ -94,8 +119,13 @@ img {
   height: 30px;
 } */
 
-/* .searchInput {
+.searchInput {
+
+  width: 100%;
+  padding: .375rem .75rem;
   font-size: 14px;
   color: gray;
   padding-bottom: 4px;
-} */
+  box-sizing: border-box;
+  border: none;
+}
