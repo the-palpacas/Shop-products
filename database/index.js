@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   multipleStatements: true,
 });
 
-connection.connect();
+
 
 
 module.exports = connection;
