@@ -4,6 +4,8 @@ const db = require('../database/index.js');
 
 const port = process.env.PORT || 5000;
 
+db.connect();
+
 const app = express();
 const allowCrossDomain = function(req, res, next) {
   res.set({

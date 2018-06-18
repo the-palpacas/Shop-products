@@ -58,7 +58,7 @@ class ShopProducts extends React.Component {
   }
 
   getShopProductInfo() {
-    axios.get(`${window.location.href}shopproducts/`)
+    axios.get(`${window.location.pathname}shopproducts/`)
       .then((response) => {
         const products = response.data[1];
         const sortByProductsId = {};
