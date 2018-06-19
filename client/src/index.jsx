@@ -95,3 +95,6 @@ class ShopProducts extends React.Component {
 
 ReactDOM.render(<ShopProducts />, document.getElementById('shopProducts'));
 
+
+
+
