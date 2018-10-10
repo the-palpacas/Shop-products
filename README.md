@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Similar products on ecommerce application
 
 ## Related Projects
 
