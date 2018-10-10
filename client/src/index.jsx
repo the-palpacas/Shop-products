@@ -97,4 +97,3 @@ ReactDOM.render(<ShopProducts />, document.getElementById('shopProducts'));
 
 
 
-
